@@ -51,3 +51,37 @@ def is_draw(board):
         if ' ' in row:
             return False
     return True
+
+def get_move(board, player):
+    '''
+    Purpose: Get a VALID move from user
+    Input: board (list of lists), player (str)
+    Output: (row, col)
+    '''
+
+    while True:
+        try:
+            user_input = input(f"Player {player}, enter row and column (e.g., 1 2): ").strip()
+            parts = user_input.split()
+
+            # Check correct format
+            if len(parts) != 2:
+                print("Error: Enter exactly TWO numbers separated by a space.")
+                continue
+
+            row, col = int(parts[0]), int(parts[1])
+
+            # Check bounds
+            if not (0 <= row <= 2 and 0 <= col <= 2):
+                print("Error: Row and column must be between 0 and 2.")
+                continue
+
+            # Check if cell is empty
+            if board[row][col] != ' ':
+                print("Error: That cell is already taken.")
+                continue
+
+            return row, col
+
+        except ValueError:
+            print("Error: Please enter valid integers (e.g., 0 1).")
