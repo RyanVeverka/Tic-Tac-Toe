@@ -1,14 +1,13 @@
 # Tic-Tac-Toe (2-Player Terminal Game)
 
 ## Project Description
-This project is a simple two-player Tic-Tac-Toe game implemented in Python.  
-The game runs in the terminal and allows two users to take turns entering moves until one player wins or the game ends in a draw.
+This is a two-player Tic-Tac-Toe game written in Python that runs in the terminal. Players take turns entering moves until one player wins or the game ends in a draw.
 
-The program demonstrates:
-- Use of functions for modular design
+This project demonstrates:
+- Use of functions for organization
 - Input validation and error handling
-- Use of lists (2D list) to represent the game board
-- Game logic including win and draw detection
+- Use of a 2D list to represent the game board
+- Game logic for detecting wins and draws
 
 ---
 
@@ -18,30 +17,24 @@ The program demonstrates:
 - Python 3 installed
 
 ### Steps
-1. Download or clone the repository:
-2. Navigate into the project folder:
+1. Open a terminal
+2. Navigate to the project folder
 3. Run the program:
+
+
+python Tic-Tac-Toe.py
+
 
 ---
 
 ## How to Play
 - The board is a 3x3 grid
-- Players take turns as:
-- Player X
-- Player O
-- Enter your move using row and column numbers (0–2)
-- Example: `1 2`
+- Player X goes first, followed by Player O
+- Enter moves as: row column (values from 0 to 2)
+  - Example: `1 2`
 - The game ends when:
-- A player wins (3 in a row)
-- The board is full (draw)
-
----
-
-## Features
-- Input validation (invalid format, out-of-bounds, occupied cells)
-- Win detection (rows, columns, diagonals)
-- Draw detection
-- Clean and modular code structure
+  - A player gets 3 in a row (win)
+  - The board is full (draw)
 
 ---
 
