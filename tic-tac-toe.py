@@ -81,3 +81,11 @@ def switch_player(current_player):
     Output: next player (str)
     '''
     return 'O' if current_player == 'X' else 'X'
+
+def initialize_board():
+    '''
+    Purpose: Create an empty 3x3 board
+    Input: None
+    Output: board (list of lists)
+    '''
+    return [[' ' for _ in range(3)] for _ in range(3)]
