@@ -40,3 +40,14 @@ def check_winner(board, player):
         return True
 
     return False
+
+def is_draw(board):
+    '''
+    Purpose: Determine if the game is a draw
+    Input: board (list of lists)
+    Output: True/False
+    '''
+    for row in board:
+        if ' ' in row:
+            return False
+    return True
