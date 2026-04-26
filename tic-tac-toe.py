@@ -14,3 +14,10 @@ def print_board(board):
         print(" | ".join(row))
         if i < 2:
             print("-" * 9)
+
+def check_winner(board, player):
+    '''
+    Purpose: Check if a player has won
+    Input: board (list of lists), player (str)
+    Output: True/False
+    '''
