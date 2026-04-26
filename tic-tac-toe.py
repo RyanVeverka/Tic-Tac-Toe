@@ -89,3 +89,35 @@ def initialize_board():
     Output: board (list of lists)
     '''
     return [[' ' for _ in range(3)] for _ in range(3)]
+
+def play_game():
+    '''
+    Purpose: Main game controller
+    Input: None
+    Output: None
+    '''
+    board = initialize_board()
+    current_player = 'X'
+    while True:
+        print_board(board)
+        row, col = get_move(board, current_player)
+        board[row][col] = current_player
+        # Check for win
+        if check_winner(board, current_player):
+            print_board(board)
+            print(f"\nPlayer {current_player} wins!")
+            break
+        # Check for draw
+        if is_draw(board):
+            print_board(board)
+            print("\nThe game is a draw!")
+            break
+        # Switch turns
+        current_player = switch_player(current_player)
+
+
+# ============================================
+# Program Entry Point
+# ============================================
+if __name__ == "__main__":
+    play_game()
